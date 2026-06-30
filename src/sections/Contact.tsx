@@ -56,12 +56,12 @@ import {
               <div className="flex items-center gap-4">
                 <FaLinkedin className="text-blue-700 text-xl" />
                 <a
-  href="https://www.linkedin.com/in/md-naimur-rahman-apu-8b5384263/"
+  href="https://www.linkedin.com/in/naimur-rahman-apu/"
   target="_blank"
   rel="noreferrer"
   className="hover:text-blue-600 transition"
 >
-  linkedin.com/in/md-naimur-rahman-apu-8b5384263
+  linkedin.com/in/naimur-rahman-apu
 </a>
               </div>
   

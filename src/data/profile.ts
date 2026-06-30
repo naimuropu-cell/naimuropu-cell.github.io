@@ -12,7 +12,7 @@ const profile = {
   
     github: "https://github.com/naimuropu-cell",
   
-    linkedin: "https://www.linkedin.com/in/md-naimur-rahman-apu-8b5384263/",
+    linkedin: "https://www.linkedin.com/in/naimur-rahman-apu/",
   
     resume: "#",
   
