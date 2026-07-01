@@ -27,10 +27,16 @@ export default function Dashboard() {
 
         <div className="flex flex-wrap gap-4 mt-8">
 
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 transition">
-            <FaDownload />
-            Download Resume
-          </button>
+        <a
+  href="/resume.pdf"
+  download
+  target="_blank"
+  rel="noreferrer"
+  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 transition"
+>
+  <FaDownload />
+  Download Resume
+</a>
 
           <a
             href="https://github.com/naimuropu-cell"

@@ -14,7 +14,7 @@ const profile = {
   
     linkedin: "https://www.linkedin.com/in/naimur-rahman-apu/",
   
-    resume: "#",
+    resume: "/resume.pdf",
   
     lastRole: "Frontend Development Intern",
   
