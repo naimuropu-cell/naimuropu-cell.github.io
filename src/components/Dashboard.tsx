@@ -20,7 +20,7 @@ export default function Dashboard() {
 
         <p className="text-slate-500 mt-6 max-w-2xl leading-8">
           Passionate about delivering high-quality software through
-          manual testing, API testing, bug reporting and structured
+          Manual testing, Automation Testing, API testing, bug reporting and structured
           QA documentation. I also have frontend development experience
           using React and TypeScript.
         </p>
@@ -52,12 +52,12 @@ export default function Dashboard() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-12">
 
           <div className="rounded-2xl bg-slate-50 p-6">
-            <h3 className="text-3xl font-bold text-blue-600">2</h3>
+            <h3 className="text-3xl font-bold text-blue-600">3</h3>
             <p className="mt-2 text-slate-500">QA Projects</p>
           </div>
 
           <div className="rounded-2xl bg-slate-50 p-6">
-            <h3 className="text-3xl font-bold text-blue-600">3</h3>
+            <h3 className="text-3xl font-bold text-blue-600">10+</h3>
             <p className="mt-2 text-slate-500">Development Projects</p>
           </div>
 
@@ -67,7 +67,7 @@ export default function Dashboard() {
           </div>
 
           <div className="rounded-2xl bg-slate-50 p-6">
-            <h3 className="text-3xl font-bold text-blue-600">1</h3>
+            <h3 className="text-3xl font-bold text-blue-600">3</h3>
             <p className="mt-2 text-slate-500">Experience</p>
           </div>
 
