@@ -86,8 +86,6 @@ import {
   
               <li>✔ Software Test Engineer</li>
   
-              <li>✔ QA Intern</li>
-  
               <li>✔ Manual QA Engineer</li>
   
               <li>✔ API Testing</li>

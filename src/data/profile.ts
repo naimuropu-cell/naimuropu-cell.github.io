@@ -19,7 +19,7 @@ const profile = {
     lastRole: "Frontend Development Intern",
   
     objective:
-      "Aspiring Software Quality Assurance Engineer passionate about software quality, structured testing, API testing, performance testing and building modern QA solutions.",
+      "Aspiring Software Quality Assurance Engineer passionate about software quality, structured testing, API testing, Postman automation, Selenium WebDriver automation, performance testing, and building reliable QA solutions using modern testing tools and practices.",
   
     stats: {
       qaProjects: 3,

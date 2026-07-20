@@ -1,14 +1,18 @@
 export const qaSkills = [
-    "Manual Testing",
-    "Test Case Design",
-    "Test Execution",
-    "Bug Reporting",
-    "Test Plan",
-    "Requirements Traceability Matrix (RTM)",
-    "API Testing (Postman)",
-    "Agile / Scrum",
-  ];
-  
+  "Manual Testing",
+  "Functional Testing",
+  "Regression Testing",
+  "Smoke Testing",
+  "Load Testing",
+  "Test Case Design",
+  "Bug Reporting",
+  "Test Plan & Documentation",
+  "API Testing (Postman)",
+  "API Automation (Postman Scripts)",
+  "Selenium WebDriver",
+  "Web Automation Testing",
+  "Agile / Scrum",
+];
   export const devSkills = [
     "React",
     "TypeScript",

@@ -124,4 +124,51 @@ export const qaProjects = [
     github:
       "https://github.com/naimuropu-cell/demoqa-manual-testing",
   },
+  {
+    id: 3,
+
+    featured: true,
+
+    title: "E-commerce Website Manual Testing",
+
+    category: "Manual Testing",
+
+    company: "E-commerce Demo Application",
+
+    website: "https://automationexercise.com/",
+
+    completedDate: "June 2026",
+
+    description:
+      "Comprehensive manual testing of an e-commerce website including functional testing, UI testing, user flow validation, product management, cart operations, checkout process, and bug reporting.",
+
+    testCases: 35,
+
+    bugReports: 5,
+
+    status: "Completed",
+
+    tools: [
+      "Manual Testing",
+      "Excel",
+      "Markdown",
+      "GitHub",
+      "Test Case Design",
+      "Bug Reporting",
+      "RTM",
+      "Test Execution",
+    ],
+
+    documents: {
+      testCase: true,
+      bugReport: true,
+      testExecution: true,
+      rtm: true,
+      screenshots: true,
+      mindMap: false,
+    },
+
+    github:
+      "https://github.com/naimuropu-cell/ecommerce-manual-testing-project",
+},
 ];

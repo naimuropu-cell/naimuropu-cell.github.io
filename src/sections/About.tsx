@@ -59,10 +59,10 @@ export default function About() {
           <div className="rounded-2xl bg-white p-6 shadow-sm border">
             <FaUserCheck className="text-3xl text-green-600 mb-4" />
             <h3 className="font-bold text-xl">
-              Manual Testing
+              Manual & Automation Testing
             </h3>
             <p className="mt-3 text-slate-500">
-              Functional and exploratory software testing.
+            Functional, exploratory, and automated software testing using modern QA tools.
             </p>
           </div>
 
