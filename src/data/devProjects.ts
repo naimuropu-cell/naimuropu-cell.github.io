@@ -14,7 +14,7 @@ export const devProjects = [
     description: "AI-powered recruitment platform.",
     stack: ["Django", "Python", "MySQL"],
     status: "Completed",
-    github: "https://github.com/naimuropu-cell",
+    github: "https://github.com/naimuropu-cell/HireConnect",
   },
   {
     id: 3,
