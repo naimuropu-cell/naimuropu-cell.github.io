@@ -1,8 +1,8 @@
 export const qaSkills = [
   "Manual Testing",
+  "Automation Testing",
   "Functional Testing",
   "Regression Testing",
-  "Smoke Testing",
   "Load Testing",
   "Test Case Design",
   "Bug Reporting",

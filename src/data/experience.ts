@@ -11,8 +11,9 @@ export const experiences = [
 
   skills: [
     "Manual Testing",
-    "Selenium WebDriver",
     "Automation Testing",
+    "Selenium WebDriver",
+    "PlayWright",
     "API Testing",
     "Postman Automation",
     "Exploratory Testing",
