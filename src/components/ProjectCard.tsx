@@ -122,26 +122,17 @@ export default function ProjectCard({
                 Verified QA Deliverables
               </h5>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {documentLabels.map(({ key, label }) => {
-                  const available = !!documents[key];
-                  return (
+                {documentLabels
+                  .filter(({ key }) => !!documents[key])
+                  .map(({ key, label }) => (
                     <div
                       key={key}
-                      className={`flex items-center gap-1.5 ${
-                        available
-                          ? "text-slate-700 font-medium"
-                          : "text-slate-400 line-through"
-                      }`}
+                      className="flex items-center gap-1.5 text-slate-700 font-medium"
                     >
-                      <span
-                        className={`w-1.5 h-1.5 rounded-full ${
-                          available ? "bg-emerald-500" : "bg-slate-300"
-                        }`}
-                      />
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
                       {label}
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
           )}
