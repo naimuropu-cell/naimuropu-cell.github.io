@@ -26,7 +26,7 @@ export const certifications: Certification[] = [
     id: 2,
     title: "Software Introduction & Testing Fundamentals",
     issuer: "EDGE Programming Bangladesh",
-    issueDate: "2026",
+    issueDate: "2025",
     skills: [
       "Software Testing Fundamentals",
       "Manual Testing",
@@ -37,16 +37,16 @@ export const certifications: Certification[] = [
   },
   {
     id: 3,
-    title: "Selenium WebDriver Web Automation",
-    issuer: "Software Automation Institute",
+    title: "Postman API Testing",
+    issuer: "Postman",
     issueDate: "2026",
-    skills: ["Selenium", "Locators", "Test Automation", "Regression Testing"],
+    skills: ["Postman", "API Testing", "REST API", "HTTP Methods"],
   },
   {
     id: 4,
-    title: "Frontend Development with React & TypeScript",
-    issuer: "Web Engineering Program",
+    title: "JMeter Performance Testing",
+    issuer: "Apache JMeter",
     issueDate: "2025",
-    skills: ["React", "TypeScript", "Tailwind CSS", "UI Verification"],
+    skills: ["JMeter", "Performance Testing", "Load Testing", "Stress Testing"],
   },
 ];
