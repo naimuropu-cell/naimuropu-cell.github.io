@@ -16,6 +16,11 @@ export const certifications: Certification[] = [
     skills: [
       "Manual Testing",
       "Automation Testing",
+      "Selenium WebDriver",
+      "Playwright",
+      "API Testing",
+      "Performance Testing",
+      "CI/CD Pipeline",
       "Test Case Design",
       "Bug Reporting",
       "Jira",
