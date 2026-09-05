@@ -1,80 +1,56 @@
 import { FaGraduationCap } from "react-icons/fa";
 import { education } from "../data/education";
+import SectionTitle from "../components/SectionTitle";
 
 export default function Education() {
   return (
-    <section id="education" className="py-24">
+    <section id="education" className="py-20">
+      <SectionTitle
+        tag="Academics"
+        title="Educational Background"
+        description="My academic foundation in Computer Science & Engineering, software design, and analytical problem-solving."
+      />
 
-      <div className="mb-14">
-
-        <p className="font-semibold uppercase tracking-widest text-blue-600">
-          Education
-        </p>
-
-        <h2 className="mt-3 text-4xl font-bold text-slate-900">
-          Academic Background
-        </h2>
-
-        <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
-          My educational journey that built the foundation for software
-          development and software quality assurance.
-        </p>
-
-      </div>
-
-      <div className="space-y-8">
-
+      <div className="space-y-6">
         {education.map((item) => (
-
           <div
             key={item.id}
-            className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-xl transition"
+            className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm hover:shadow-md transition"
           >
-
-            <div className="flex flex-col md:flex-row md:justify-between gap-6">
-
+            <div className="flex flex-col md:flex-row md:justify-between gap-4">
               <div>
-
                 <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-blue-50 text-blue-600 text-xl">
+                    <FaGraduationCap />
+                  </div>
 
-                  <FaGraduationCap className="text-blue-600 text-2xl" />
-
-                  <h3 className="text-2xl font-bold text-slate-900">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
                     {item.degree}
                   </h3>
-
                 </div>
 
-                <h4 className="mt-3 text-lg font-semibold text-blue-600">
+                <h4 className="mt-2 text-base font-semibold text-blue-600">
                   {item.institution}
                 </h4>
 
-                <p className="mt-5 leading-8 text-slate-600">
+                <p className="mt-4 leading-relaxed text-slate-600 text-sm sm:text-base">
                   {item.description}
                 </p>
-
               </div>
 
-              <div className="md:text-right">
-
-                <p className="font-semibold text-slate-700">
+              <div className="md:text-right shrink-0">
+                <p className="font-semibold text-sm text-slate-700">
                   {item.duration}
                 </p>
 
-                <span className="mt-3 inline-block rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
+                <span className="mt-2 inline-block rounded-full bg-emerald-50 border border-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
                   {item.result}
                 </span>
-
               </div>
-
             </div>
-
           </div>
-
         ))}
-
       </div>
-
     </section>
   );
 }

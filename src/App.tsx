@@ -10,12 +10,13 @@ import QAProjects from "./sections/QAProjects";
 import DevelopmentProjects from "./sections/DevelopmentProjects";
 import Experience from "./sections/Experience";
 import Education from "./sections/Education";
+import Certifications from "./sections/Certifications";
 import Resume from "./sections/Resume";
 import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div id="top" className="min-h-screen bg-slate-50 text-slate-900 selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
 
       <Dashboard />
@@ -34,6 +35,8 @@ function App() {
         <Experience />
 
         <Education />
+
+        <Certifications />
 
         <Resume />
 

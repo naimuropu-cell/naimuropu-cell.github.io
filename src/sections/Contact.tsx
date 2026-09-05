@@ -1,105 +1,144 @@
 import {
-    FaEnvelope,
-    FaGithub,
-    FaLinkedin,
-    FaMapMarkerAlt,
-  } from "react-icons/fa";
-  
-  export default function Contact() {
-    return (
-      <section id="contact" className="py-24">
-  
-        <div className="text-center">
-  
-          <p className="font-semibold uppercase tracking-widest text-blue-600">
-            Contact
-          </p>
-  
-          <h2 className="mt-3 text-4xl font-bold text-slate-900">
-            Let's Connect
-          </h2>
-  
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            I'm currently looking for opportunities as a Junior Software QA
-            Engineer. Feel free to reach out for internships, full-time roles,
-            freelance work or collaborations.
-          </p>
-  
-        </div>
-  
-        <div className="mt-14 grid gap-8 md:grid-cols-2">
-  
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-  
-            <h3 className="mb-6 text-2xl font-bold">
-              Contact Information
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
+import profile from "../data/profile";
+import SectionTitle from "../components/SectionTitle";
+
+export default function Contact() {
+  return (
+    <section id="contact" className="py-20">
+      <SectionTitle
+        center
+        tag="Get In Touch"
+        title="Let's Connect & Collaborate"
+        description="I'm actively seeking opportunities as a Software QA Engineer, Test Automation Engineer, or Frontend QA. Let's discuss how I can contribute to your software quality."
+      />
+
+      <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 className="mb-6 text-xl font-bold text-slate-900">
+              Direct Contact
             </h3>
-  
-            <div className="space-y-5">
-  
+
+            <div className="space-y-5 text-slate-700">
+              <a
+                href={`mailto:${profile.email}`}
+                className="flex items-center gap-4 hover:text-blue-600 transition group"
+              >
+                <div className="p-3 rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
+                  <FaEnvelope className="text-lg" />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">
+                    Email
+                  </p>
+                  <p className="font-semibold text-slate-800">{profile.email}</p>
+                </div>
+              </a>
+
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-4 hover:text-blue-600 transition group"
+              >
+                <div className="p-3 rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
+                  <FaLinkedin className="text-lg" />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">
+                    LinkedIn
+                  </p>
+                  <p className="font-semibold text-slate-800">
+                    linkedin.com/in/naimur-rahman-apu
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-4 hover:text-slate-900 transition group"
+              >
+                <div className="p-3 rounded-2xl bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition">
+                  <FaGithub className="text-lg" />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">
+                    GitHub
+                  </p>
+                  <p className="font-semibold text-slate-800">
+                    github.com/naimuropu-cell
+                  </p>
+                </div>
+              </a>
+
               <div className="flex items-center gap-4">
-                <FaEnvelope className="text-blue-600 text-xl" />
-                <span>naimuropu@gmail.com</span>
+                <div className="p-3 rounded-2xl bg-red-50 text-red-500">
+                  <FaMapMarkerAlt className="text-lg" />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">
+                    Location
+                  </p>
+                  <p className="font-semibold text-slate-800">
+                    {profile.location}
+                  </p>
+                </div>
               </div>
-  
-              <div className="flex items-center gap-4">
-                <FaGithub className="text-xl" />
-                <a
-                  href="https://github.com/naimuropu-cell"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  github.com/naimuropu-cell
-                </a>
-              </div>
-  
-              <div className="flex items-center gap-4">
-                <FaLinkedin className="text-blue-700 text-xl" />
-                <a
-  href="https://www.linkedin.com/in/naimur-rahman-apu/"
-  target="_blank"
-  rel="noreferrer"
-  className="hover:text-blue-600 transition"
->
-  linkedin.com/in/naimur-rahman-apu
-</a>
-              </div>
-  
-              <div className="flex items-center gap-4">
-                <FaMapMarkerAlt className="text-red-500 text-xl" />
-                <span>Dhaka, Bangladesh</span>
-              </div>
-  
             </div>
-  
           </div>
-  
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-  
-            <h3 className="mb-6 text-2xl font-bold">
-              Looking For
-            </h3>
-  
-            <ul className="space-y-4 text-slate-600">
-  
-              <li>✔ Junior Software QA Engineer</li>
-  
-              <li>✔ Software Test Engineer</li>
-  
-              <li>✔ Manual QA Engineer</li>
-  
-              <li>✔ API Testing</li>
-  
-              <li>✔ Performance Testing</li>
-  
-              <li>✔ Frontend Development Collaboration</li>
-  
-            </ul>
-  
+
+          <div className="mt-8 pt-6 border-t border-slate-100">
+            <a
+              href={`mailto:${profile.email}?subject=Job Opportunity / QA Inquiry`}
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 font-semibold text-white hover:bg-blue-700 transition shadow-sm"
+            >
+              <FaPaperPlane className="text-sm" />
+              Send Direct Message
+            </a>
           </div>
-  
         </div>
-  
-      </section>
-    );
-  }
+
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h3 className="mb-6 text-xl font-bold text-slate-900">
+            Roles & Opportunities Interested In
+          </h3>
+
+          <ul className="space-y-3.5 text-slate-700 text-sm font-medium">
+            <li className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              Junior Software QA Engineer / QA Analyst
+            </li>
+            <li className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              Test Automation Engineer (Selenium / Playwright)
+            </li>
+            <li className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              API & Integration Testing (Postman / REST)
+            </li>
+            <li className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              Performance & Load Testing (PulseLoad)
+            </li>
+            <li className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              Frontend & Web Development Collaborations
+            </li>
+          </ul>
+
+          <div className="mt-8 p-5 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-900 leading-relaxed">
+            💡 <strong>Open to:</strong> Remote, On-site, or Hybrid roles, contract testing projects, and full-time QA opportunities.
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

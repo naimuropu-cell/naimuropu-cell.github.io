@@ -1,34 +1,21 @@
 import ProjectCard from "../components/ProjectCard";
+import SectionTitle from "../components/SectionTitle";
 import { qaProjects } from "../data/projects";
 
 export default function QAProjects() {
   return (
-    <section id="projects" className="py-24">
-
-      <div className="mb-12">
-
-        <h2 className="text-4xl font-bold">
-          QA Projects
-        </h2>
-
-        <p className="text-slate-500 mt-3">
-          Manual testing projects demonstrating structured QA documentation,
-          test execution, and defect reporting.
-        </p>
-
-      </div>
+    <section id="projects" className="py-20">
+      <SectionTitle
+        tag="QA Portfolio"
+        title="Quality Assurance Projects"
+        description="Structured manual and automated testing projects demonstrating end-to-end test execution, test matrices, defect logging, and RTM documentation."
+      />
 
       <div className="grid lg:grid-cols-2 gap-8">
-
         {qaProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            {...project}
-          />
+          <ProjectCard key={project.id} {...project} />
         ))}
-
       </div>
-
     </section>
   );
 }
