@@ -10,8 +10,8 @@ export interface Certification {
 export const certifications: Certification[] = [
   {
     id: 1,
-    title: "Software Quality Assurance & Testing Engineering",
-    issuer: "Professional QA Training Program",
+    title: "Software Quality Assurance - Manual and Automation",
+    issuer: "OSTAD",
     issueDate: "2026",
     skills: [
       "Manual Testing",
