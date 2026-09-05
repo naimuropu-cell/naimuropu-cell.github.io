@@ -15,6 +15,7 @@ export const certifications: Certification[] = [
     issueDate: "2026",
     skills: [
       "Manual Testing",
+      "Automation Testing",
       "Test Case Design",
       "Bug Reporting",
       "Jira",
@@ -23,10 +24,16 @@ export const certifications: Certification[] = [
   },
   {
     id: 2,
-    title: "API Testing & Automation with Postman",
-    issuer: "Postman Academy / Certification",
+    title: "Software Introduction & Testing Fundamentals",
+    issuer: "EDGE Programming Bangladesh",
     issueDate: "2026",
-    skills: ["REST API", "Postman", "API Automation", "JSON Validation"],
+    skills: [
+      "Software Testing Fundamentals",
+      "Manual Testing",
+      "SDLC & STLC",
+      "Test Case Design",
+      "Defect Lifecycle",
+    ],
   },
   {
     id: 3,
