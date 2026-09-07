@@ -106,7 +106,7 @@ export const qaProjects: QAProject[] = [
     featured: true,
     title: "BizPOS Pro QA Audit & Automation Framework",
     category: "Manual & Automation Testing",
-    company: "YES Bangladesh",
+    company: "BizPos Pro",
     website: "https://sme.yesbangladesh.net/",
     completedDate: "August 2026",
     description:
