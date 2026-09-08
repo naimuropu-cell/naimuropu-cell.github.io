@@ -24,4 +24,13 @@ export const devProjects = [
     status: "Completed",
     github: "https://github.com/naimuropu-cell/Restaurent-POS-System-Vue-app",
   },
+  {
+    id: 4,
+    title: "BugTrack Pro",
+    description:
+      "A centralized QA test management platform to manage test cases, track bugs, organize testing activities, and monitor software quality assurance workflows.",
+    stack: ["React", "FastAPI", "Python", "MongoDB"],
+    status: "Completed",
+    github: "https://github.com/naimuropu-cell/BugTrack-Pro-QA-Test-Management-Platform",
+  },
 ];
