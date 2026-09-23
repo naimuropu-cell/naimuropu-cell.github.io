@@ -16,7 +16,9 @@ export default function DevelopmentProjects() {
           <DevProjectCard
             key={project.id}
             title={project.title}
+            category={project.category}
             description={project.description}
+            highlights={project.highlights}
             stack={project.stack}
             status={project.status}
             github={project.github}
