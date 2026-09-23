@@ -23,7 +23,7 @@ const profile = {
 
   stats: {
     qaProjects: "4+",
-    developmentProjects: "3+",
+    developmentProjects: "5+",
     testCases: "2,000+",
     bugReports: "100+",
     skillsCount: "20+",
