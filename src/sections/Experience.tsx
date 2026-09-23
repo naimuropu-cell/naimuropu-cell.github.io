@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaBriefcase } from "react-icons/fa";
 import { experiences } from "../data/experience";
 import SectionTitle from "../components/SectionTitle";
@@ -12,10 +13,15 @@ export default function Experience() {
       />
 
       <div className="space-y-6">
-        {experiences.map((job) => (
-          <div
+        {experiences.map((job, index) => (
+          <motion.div
             key={job.id}
-            className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm hover:shadow-md transition"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.45, delay: index * 0.1 }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm hover:shadow-lg transition-shadow"
           >
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
               <div>
@@ -59,7 +65,7 @@ export default function Experience() {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

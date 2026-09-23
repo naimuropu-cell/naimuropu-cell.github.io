@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaGithub, FaCheckCircle, FaLayerGroup } from "react-icons/fa";
 
 type Props = {
@@ -20,7 +21,10 @@ export default function DevProjectCard({
   github,
 }: Props) {
   return (
-    <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-slate-300">
+    <motion.div
+      whileHover={{ y: -6, transition: { duration: 0.2 } }}
+      className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 sm:p-8 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:border-slate-300"
+    >
       {/* Top Accent Gradient Border */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-80 group-hover:opacity-100 transition-opacity" />
 
@@ -104,6 +108,6 @@ export default function DevProjectCard({
           Open Source
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 }

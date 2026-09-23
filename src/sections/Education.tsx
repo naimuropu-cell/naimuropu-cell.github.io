@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
 import { education } from "../data/education";
 import SectionTitle from "../components/SectionTitle";
@@ -12,10 +13,15 @@ export default function Education() {
       />
 
       <div className="space-y-6">
-        {education.map((item) => (
-          <div
+        {education.map((item, index) => (
+          <motion.div
             key={item.id}
-            className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm hover:shadow-md transition"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.45, delay: index * 0.1 }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm hover:shadow-lg transition-shadow"
           >
             <div className="flex flex-col md:flex-row md:justify-between gap-4">
               <div>
@@ -48,7 +54,7 @@ export default function Education() {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

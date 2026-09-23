@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaCertificate, FaAward } from "react-icons/fa";
 import { certifications } from "../data/certifications";
 import SectionTitle from "../components/SectionTitle";
@@ -12,10 +13,15 @@ export default function Certifications() {
       />
 
       <div className="grid md:grid-cols-2 gap-6">
-        {certifications.map((cert) => (
-          <div
+        {certifications.map((cert, index) => (
+          <motion.div
             key={cert.id}
-            className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-lg transition duration-200 flex flex-col justify-between"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.45, delay: index * 0.1 }}
+            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-xl transition-shadow duration-200 flex flex-col justify-between"
           >
             <div>
               <div className="flex items-start justify-between gap-4">
@@ -54,7 +60,7 @@ export default function Certifications() {
                 <FaCertificate /> Verified Knowledge
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

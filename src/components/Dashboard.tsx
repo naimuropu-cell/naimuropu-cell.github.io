@@ -9,6 +9,7 @@ import {
   FaArrowRight,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import profile from "../data/profile";
 
@@ -29,7 +30,12 @@ export default function Dashboard() {
         className="pointer-events-none absolute bottom-10 left-10 h-64 w-64 rounded-full bg-cyan-400/15 blur-3xl"
       />
 
-      <div className="relative rounded-3xl border border-slate-200/90 bg-white/95 p-8 sm:p-10 lg:p-14 shadow-xl shadow-slate-200/50 backdrop-blur-md">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] }}
+        className="relative rounded-3xl border border-slate-200/90 bg-white/95 p-8 sm:p-10 lg:p-14 shadow-xl shadow-slate-200/50 backdrop-blur-md"
+      >
         {/* Top Gradient Stripe */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 rounded-t-3xl" />
 
@@ -190,7 +196,7 @@ export default function Dashboard() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

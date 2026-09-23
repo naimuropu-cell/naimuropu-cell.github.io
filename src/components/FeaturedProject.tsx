@@ -1,10 +1,17 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { featuredQAProject } from "../data/projects";
 
 export default function FeaturedProject() {
   return (
     <section id="featured-project" className="py-16">
-      <div className="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-8 sm:p-12 lg:p-14 shadow-xl">
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] }}
+        className="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-8 sm:p-12 lg:p-14 shadow-xl"
+      >
         <span className="inline-flex rounded-full bg-blue-600 px-4 py-1.5 text-sm font-semibold tracking-wide">
           ⭐ Featured QA Project
         </span>
@@ -78,7 +85,7 @@ export default function FeaturedProject() {
             <FaExternalLinkAlt className="text-xs" />
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

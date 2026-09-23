@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaDownload, FaFilePdf, FaEye } from "react-icons/fa";
 import profile from "../data/profile";
 import SectionTitle from "../components/SectionTitle";
@@ -12,7 +13,13 @@ export default function Resume() {
         description="Review my detailed qualifications, QA testing achievements, technical skills, and educational background in PDF format."
       />
 
-      <div className="mt-10 flex flex-wrap justify-center items-center gap-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.5 }}
+        className="mt-10 flex flex-wrap justify-center items-center gap-4"
+      >
         <a
           href={profile.resume}
           download
@@ -36,7 +43,7 @@ export default function Resume() {
           <FaEye />
           Preview in Browser
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

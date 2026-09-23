@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaGithub,
@@ -19,7 +20,13 @@ export default function Contact() {
       />
 
       <div className="mt-12 grid gap-8 md:grid-cols-2">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+          className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+        >
           <div>
             <h3 className="mb-6 text-xl font-bold text-slate-900">
               Direct Contact
@@ -104,9 +111,15 @@ export default function Contact() {
               Send Direct Message
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, x: 24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+          className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow"
+        >
           <h3 className="mb-6 text-xl font-bold text-slate-900">
             Roles & Opportunities Interested In
           </h3>
@@ -137,7 +150,7 @@ export default function Contact() {
           <div className="mt-8 p-5 rounded-2xl bg-blue-50 border border-blue-100 text-xs text-blue-900 leading-relaxed">
             💡 <strong>Open to:</strong> Remote, On-site, or Hybrid roles, contract testing projects, and full-time QA opportunities.
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

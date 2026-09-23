@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaGithub,
   FaBug,
@@ -48,7 +49,10 @@ export default function ProjectCard({
   ];
 
   return (
-    <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl flex flex-col justify-between">
+    <motion.div
+      whileHover={{ y: -5, transition: { duration: 0.2 } }}
+      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl flex flex-col justify-between"
+    >
       {/* Top Section */}
       <div>
         {/* Header */}
@@ -115,27 +119,37 @@ export default function ProjectCard({
           </div>
 
           {/* Collapsible QA Deliverables Details */}
-          {expanded && documents && (
-            <div className="mt-5 p-4 rounded-2xl bg-blue-50/60 border border-blue-100">
-              <h5 className="text-xs font-bold uppercase tracking-wider text-blue-900 mb-2.5 flex items-center gap-1.5">
-                <FaFileAlt className="text-blue-600" />
-                Verified QA Deliverables
-              </h5>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                {documentLabels
-                  .filter(({ key }) => !!documents[key])
-                  .map(({ key, label }) => (
-                    <div
-                      key={key}
-                      className="flex items-center gap-1.5 text-slate-700 font-medium"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                      {label}
-                    </div>
-                  ))}
-              </div>
-            </div>
-          )}
+          <AnimatePresence>
+            {expanded && documents && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.28, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="mt-5 p-4 rounded-2xl bg-blue-50/60 border border-blue-100">
+                  <h5 className="text-xs font-bold uppercase tracking-wider text-blue-900 mb-2.5 flex items-center gap-1.5">
+                    <FaFileAlt className="text-blue-600" />
+                    Verified QA Deliverables
+                  </h5>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    {documentLabels
+                      .filter(({ key }) => !!documents[key])
+                      .map(({ key, label }) => (
+                        <div
+                          key={key}
+                          className="flex items-center gap-1.5 text-slate-700 font-medium"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                          {label}
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
@@ -156,7 +170,7 @@ export default function ProjectCard({
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
           aria-label="Toggle project details"
-          className="flex items-center gap-1.5 rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-700 hover:border-blue-600 hover:text-blue-600 transition"
+          className="flex items-center gap-1.5 rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer"
         >
           {expanded ? "Hide Details" : "QA Artifacts"}
           {expanded ? <FaChevronUp className="text-xs" /> : <FaChevronDown className="text-xs" />}
@@ -172,6 +186,6 @@ export default function ProjectCard({
           Documentation <FaExternalLinkAlt className="text-[10px]" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
 type SkillCardProps = {
@@ -7,7 +8,10 @@ type SkillCardProps = {
 
 export default function SkillCard({ title, category = "qa" }: SkillCardProps) {
   return (
-    <div className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:border-blue-300">
+    <motion.div
+      whileHover={{ y: -3, scale: 1.015, transition: { duration: 0.15 } }}
+      className="flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-2xs transition-colors duration-200 hover:shadow-md hover:border-blue-300"
+    >
       <FaCheckCircle
         className={`text-sm shrink-0 ${
           category === "qa" ? "text-blue-600" : "text-emerald-600"
@@ -16,6 +20,6 @@ export default function SkillCard({ title, category = "qa" }: SkillCardProps) {
       <h4 className="text-sm font-semibold text-slate-800 tracking-tight">
         {title}
       </h4>
-    </div>
+    </motion.div>
   );
 }
