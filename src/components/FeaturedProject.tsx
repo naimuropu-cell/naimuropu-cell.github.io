@@ -79,9 +79,9 @@ export default function FeaturedProject() {
               <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-3.5 py-1 text-xs font-semibold tracking-wide shadow-sm">
                 ⭐ Featured QA Platform
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 px-3 py-1 text-xs font-medium text-emerald-400">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                Live Performance Telemetry
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 px-3 py-1 text-xs font-medium text-cyan-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                Performance Testing Telemetry
               </span>
             </div>
 
@@ -166,11 +166,11 @@ export default function FeaturedProject() {
                 <div className="flex items-center gap-2">
                   <FaChartArea className="text-cyan-400 text-base" />
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                    Live Diagnostics Console
+                    Performance Telemetry (Preview)
                   </span>
                 </div>
                 <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                  WebSocket: Active
+                  WebSocket Powered
                 </span>
               </div>
 
@@ -201,7 +201,7 @@ export default function FeaturedProject() {
               <div className="space-y-3 pt-2">
                 <div className="flex items-center justify-between text-xs font-semibold text-slate-400">
                   <span>Stress Test Execution Stages</span>
-                  <span className="text-emerald-400">Phase 2 / 3 Running</span>
+                  <span className="text-cyan-400">Automated Pipeline</span>
                 </div>
 
                 {testPhases.map((phase) => (
