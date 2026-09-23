@@ -11,18 +11,18 @@ import {
   FaCodeBranch,
 } from "react-icons/fa";
 import {
-  SiSelenium,
-  SiPostman,
-  SiApachejmeter,
-  SiJira,
-  SiReact,
-  SiTypescript,
-  SiJavascript,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiPython,
-  SiGit,
-} from "react-icons/si";
+  SeleniumIcon,
+  PostmanIcon,
+  JMeterIcon,
+  JiraIcon,
+  ReactIcon,
+  TypeScriptIcon,
+  JavaScriptIcon,
+  TailwindIcon,
+  NodeIcon,
+  PythonIcon,
+  GitIcon,
+} from "./TechIcons";
 
 type SkillCardProps = {
   title?: string;
@@ -49,29 +49,29 @@ export default function SkillCard({
   const renderIcon = () => {
     switch (iconType) {
       case "selenium":
-        return <SiSelenium className="text-lg text-emerald-600" />;
+        return <SeleniumIcon className="text-lg text-emerald-600" />;
       case "postman":
-        return <SiPostman className="text-lg text-amber-600" />;
+        return <PostmanIcon className="text-lg text-amber-600" />;
       case "jmeter":
-        return <SiApachejmeter className="text-lg text-rose-600" />;
+        return <JMeterIcon className="text-lg text-rose-600" />;
       case "jira":
-        return <SiJira className="text-lg text-blue-600" />;
+        return <JiraIcon className="text-lg text-blue-600" />;
       case "react":
-        return <SiReact className="text-lg text-cyan-600" />;
+        return <ReactIcon className="text-lg text-cyan-600" />;
       case "typescript":
-        return <SiTypescript className="text-lg text-blue-600" />;
+        return <TypeScriptIcon className="text-lg text-blue-600" />;
       case "javascript":
-        return <SiJavascript className="text-lg text-amber-500" />;
+        return <JavaScriptIcon className="text-lg text-amber-500" />;
       case "tailwind":
-        return <SiTailwindcss className="text-lg text-cyan-500" />;
+        return <TailwindIcon className="text-lg text-cyan-500" />;
       case "nodejs":
-        return <SiNodedotjs className="text-lg text-emerald-600" />;
+        return <NodeIcon className="text-lg text-emerald-600" />;
       case "python":
-        return <SiPython className="text-lg text-blue-500" />;
+        return <PythonIcon className="text-lg text-blue-500" />;
       case "database":
         return <FaDatabase className="text-lg text-indigo-600" />;
       case "git":
-        return <SiGit className="text-lg text-orange-600" />;
+        return <GitIcon className="text-lg text-orange-600" />;
       case "cicd":
         return <FaCodeBranch className="text-lg text-purple-600" />;
       case "bug":
